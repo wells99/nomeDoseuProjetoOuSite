@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial: Subindo código e publicando no GitHub Pages</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f6f8;
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #24292e;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        p.intro {
+            text-align: center;
+            color: #586069;
+            margin-bottom: 30px;
+        }
+        .passo {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e1e4e8;
+        }
+        .passo h2 {
+            color: #0366d6;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        .passo p {
+            margin-bottom: 15px;
+        }
+        .passo img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #d1d5da;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: block;
+            margin: 0 auto;
+        }
+        .guia-pages {
+            background-color: #e6f3ff;
+            border-left: 5px solid #0366d6;
+            padding: 25px;
+            margin-top: 40px;
+            border-radius: 4px;
+        }
+        .guia-pages h2 {
+            color: #0366d6;
+            margin-bottom: 15px;
+        }
+        .guia-pages ol {
+            margin-left: 20px;
+        }
+        .guia-pages li {
+            margin-bottom: 12px;
+        }
+        code {
+            background-color: #f6f8fa;
+            color: #e34c26;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+            font-weight: bold;
+            border: 1px solid #e1e4e8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Como Subir seu Projeto para o GitHub</h1>
+        <p class="intro">Siga os passos visuais abaixo para versionar seu código e, ao final, veja como publicar seu site na internet de graça!</p>
+
+        <!-- Seção dos Passos com Imagens -->
+        <!-- Nota pedagógica: Explique para o aluno que o atributo 'alt' ajuda na acessibilidade e SEO -->
+        
+        <div class="passo">
+            <h2>Passo 1: Criando o repositório</h2>
+            <img src="01.PNG" alt="Passo 1 - Criando o repositório">
+        </div>
+
+        <div class="passo">
+            <h2>Passo 2: Nome e descrição do repositório</h2>
+            <p>Como vamos expor na internet deve ser público, mas você pode guardar códigos somente para você de forma privada</p>
+            <img src="02.PNG" alt="Passo 2 - Nome e descrição do repositório">
+        </div>
+
+        <div class="passo">
+            <h2>Passo 3: Clonando o repositório</h2>
+            <p>Clique no botão indicado para copiar o link do repositório.</p>
+            <img src="03.PNG" alt="Passo 3 - Clonando o repositório">
+        </div>
+
+        <div class="passo">
+            <h2>Passo 4: git clone + link copiado</h2>
+            <p>Em uma pasta de preferencia na pasta do projeto,</p>
+            <p>Seja no vsCode ou diretamente no terminal, execute o comando:</p>
+            <code>git clone [link-copiado]</code>
+            <p></p>
+            <img src="04.PNG" alt="Passo 4 - Criando commit">
+        </div>
+
+        <div class="passo">
+            <h2>Passo 5: Vai ser criada uma pasta com o nome do repositório</h2>
+            <img src="05.PNG" alt="Passo 5 - Conectando ao GitHub">
+        </div>
+
+        <div class="passo">
+            <h2>Passo 6: Copie os arquivos do seu projeto para dentro dessa pasta <br> recém-criada.</h2>
+            <img src="06.PNG" alt="Passo 6 - Realizando Push">
+        </div>
+
+        <div class="passo">
+            <h2>Passo 7: Adicionando os arquivos ao repositório</h2>
+            <p>Git add .</p>
+            <img src="07.PNG" alt="Passo 7 - Verificando no navegador">
+        </div>
+
+        <div class="passo">
+            <h2>Passo 8: "Commit" A forma que identificamos a mudança (versão) </h2>
+            <p>Git commit -m "Mensagem do commit"</p>
+            <img src="08.PNG" alt="Passo 8 - Ajustes finais">
+        </div>
+
+        <div class="passo">
+            <h2>Passo 9: Enviando as alterações para o repositório remoto</h2>
+            <p>Git push origin main (nome da branch)</p>
+            <img src="09.PNG" alt="Passo 9 - Conclusão do envio">
+        </div>
+
+        <!-- Seção ensinando a publicar no GitHub Pages -->
+        <div class="guia-pages">
+            <h2>🚀 Como colocar este site no ar com o GitHub Pages</h2>
+            <p>Agora que seus arquivos já estão no repositório do GitHub, você pode transformar esse código em um site público com um link real para colocar no seu portfólio. Siga o passo a passo:</p>
+            <br>
+            <ol>
+                <li><strong>Renomeie este arquivo para index.html:</strong> Os servidores da web (incluindo o GitHub Pages) procuram automaticamente por um arquivo chamado <code>index.html</code> para ser a página inicial do site. Se o seu arquivo se chama <code>seuCodigo.html</code>, renomeie-o para <code>index.html</code> no seu editor e envie essa alteração para o GitHub.</li>
+                <li><strong>Acesse as Configurações (Settings):</strong> Na página principal do seu repositório no GitHub, clique na aba <strong>Settings</strong>, localizada no menu superior direito (ícone de engrenagem).</li>
+                <li><strong>Abra o menu Pages:</strong> No menu lateral esquerdo da página de configurações, role um pouco para baixo e clique na opção <strong>Pages</strong>.</li>
+                <li><strong>Escolha a Branch principal:</strong> Na seção <strong>Build and deployment</strong>, certifique-se de que o campo <em>Source</em> está marcado como <strong>Deploy from a branch</strong>. Logo abaixo, no campo <em>Branch</em>, clique no botão que diz <code>None</code>, mude para <code>main</code> (ou <code>master</code>) e mantenha a pasta como <code>/ (root)</code>.</li>
+                <li><strong>Salve as alterações:</strong> Clique no botão <strong>Save</strong>.</li>
+                <li><strong>Aguarde a publicação:</strong> O GitHub levará entre 1 e 3 minutos para compilar o seu site. Quando você atualizar a página do GitHub Pages após esse tempo, um aviso verde aparecerá no topo mostrando o seu link ao vivo, no formato: <code>https://seu-usuario.github.io/nome-do-repositorio/</code>.</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
