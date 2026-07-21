@@ -1,0 +1,1 @@
+Aqui fica o sumario do código, detalhes principais e formas de iniciar os projetos dos programadores.
